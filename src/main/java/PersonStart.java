@@ -3,7 +3,7 @@ import java.util.Optional;
 public class PersonStart {
 
     public static void main(String[] args) {
-        Person person = new Person();
+        Person person = new Person("Test");
         //person.setAlter(-1);
 
         person.setAlter(0);

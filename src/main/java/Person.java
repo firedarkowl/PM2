@@ -2,12 +2,19 @@ import java.util.Optional;
 
 public class Person {
 
+    public Person(String name) {
+        this.name = name;
+    }
+
     public int getAlter() {
         return alter;
     }
 
     private int alter = 0;
     private Person kind;
+
+    private String name;
+
 
     /**
      * @param alterNeu Das neue Alter dieser Person. Darf nicht kleiner als 0 sein
@@ -36,5 +43,17 @@ public class Person {
         } else {
             return Optional.of(kind);
         }
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String toString(){
+        return name;
     }
 }
