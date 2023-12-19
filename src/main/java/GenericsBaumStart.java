@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class GenericsBaum {
+public class GenericsBaumStart {
 
     public static void main(String[] args) {
 
