@@ -28,14 +28,20 @@ public class ListStart {
             System.out.println(p);
         }
 
-        int aindex = personen.indexOf("a");
+        //das gibt mir die Referenz von Person "a"
+        int aindex = personen.indexOf(a);
+        //wenn der Index enthalten ist, dann ersetzen wir
         if(aindex >= 0){
-            personen.set(0, new Person("d"));
+            personen.set(aindex, new Person("d"));
             Person d = personen.get(0);
         }
 
         System.out.println(personen);
 
+
+        //aus ArrayList ne Linked List machen
         personen = new LinkedList<>(personen);
+
+
     }
 }
