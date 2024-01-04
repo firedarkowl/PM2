@@ -2,20 +2,29 @@ package Blatt2;
 
 import java.util.Map;
 
+/**
+ *Also hier ist das einzelne Paar implementiert
+ * bestehend aus Key & Value
+ */
+
 public class MapPaar<K,V> implements Map.Entry<K,V> {
+
+    private K key;
+    private V value;
 
     @Override
     public K getKey() {
-        return null;
+        return key;
     }
 
     @Override
     public V getValue() {
-        return null;
+        return value;
     }
 
     @Override
     public V setValue(V value) {
-        return null;
+        return this.value = value;
     }
+
 }
