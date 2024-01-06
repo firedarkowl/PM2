@@ -1,5 +1,6 @@
 package Blatt2;
 
+import java.util.Arrays;
 import java.util.Collection;
 import java.util.Map;
 import java.util.Set;
@@ -80,11 +81,11 @@ public class PM2Map<K, V> implements Map<K, V> {
             MapPaar<K, V>[] new_paare = new MapPaar[new_size];
             System.arraycopy(paare, 0, new_paare, 0, size);
             new_paare[size + 1] = new MapPaar<>();
+            size = new_size;
             counter++;
-        } else if () {
-            //todo
+        } else if (istKeyDrin(key)) {
             //wenn unter diesem Key was vorhanden ist, value überschreiben
-
+            //todo
         } else if(counter == 0){
             //wenn noch nix drin ist
             paare[0] = new MapPaar<>();
@@ -94,6 +95,15 @@ public class PM2Map<K, V> implements Map<K, V> {
             counter++;
         }
         return null;
+    }
+
+    private boolean istKeyDrin(K key){
+        for(int i = 0; i < paare.length; i++){
+            if(paare[i].getKey() == key){
+                return true;
+            }
+        }
+        return false;
     }
 
     @Override
