@@ -85,7 +85,9 @@ public class PM2Map<K, V> implements Map<K, V> {
             counter++;
         } else if (istKeyDrin(key)) {
             //wenn unter diesem Key was vorhanden ist, value überschreiben
-            //todo
+            for(int i = 0; i < size; i++){
+
+            }
         } else if(counter == 0){
             //wenn noch nix drin ist
             paare[0] = new MapPaar<>();
