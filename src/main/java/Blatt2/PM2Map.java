@@ -16,8 +16,7 @@ public class PM2Map<K, V> implements Map<K, V> {
     private MapPaar<K, V>[] paare;
 
     public PM2Map(){
-        //ich hab beschlossen es hat Anfang die Größe 1
-        this.paare = new MapPaar[1];
+        this.paare = new MapPaar[0];
         this.size = paare.length;
     }
 
@@ -80,7 +79,7 @@ public class PM2Map<K, V> implements Map<K, V> {
             int new_size = size * 2;
             MapPaar<K, V>[] new_paare = new MapPaar[new_size];
             System.arraycopy(paare, 0, new_paare, 0, size);
-            new_paare[size + 1] = new MapPaar<>();
+            new_paare[size + 1] = new MapPaar<>(key, value);
             size = new_size;
             counter++;
         } else if (istKeyDrin(key)) {
@@ -90,10 +89,10 @@ public class PM2Map<K, V> implements Map<K, V> {
             }
         } else if(counter == 0){
             //wenn noch nix drin ist
-            paare[0] = new MapPaar<>();
+            paare[0] = new MapPaar<>(key, value);
             counter++;
         } else {
-            paare[counter+1] = new MapPaar<>();
+            paare[counter+1] = new MapPaar<>(key, value);
             counter++;
         }
         return null;

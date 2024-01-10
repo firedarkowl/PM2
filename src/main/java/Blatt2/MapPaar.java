@@ -12,6 +12,11 @@ public class MapPaar<K,V> implements Map.Entry<K,V> {
     private K key;
     private V value;
 
+    public MapPaar(K schlüssel, V wert) {
+        this.key = key;
+        this.value = value;
+    }
+
     @Override
     public K getKey() {
         return key;
