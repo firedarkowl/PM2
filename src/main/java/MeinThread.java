@@ -12,6 +12,12 @@ public class MeinThread extends Thread{
 
     }
 
+    //ist quasi eine neue Main Methode und soll genauso behandelt werden
+    //ich muss sie überschreiben
+    //das hier niemals direkt aufrufen -> wird kein Thread erzeugt
+    //läuft dann wie eine normale Methode
+
+    //wenn run Methode durchgelaufen ist, dann wird der Thread beendet
     @Override
     public void run() {
         //System.err.println("Thread: Hallo!");
