@@ -3,10 +3,14 @@ public class MeinThreadSynch extends Thread {
     private final ThreadTest testObj;
 
 
+    //jeder Threads speichert das übergebene Objekt als Feld
     public MeinThreadSynch(ThreadTest testObj) {
         this.testObj = testObj;
     }
 
+
+    //hier wird der Zähler aus dem Objekt genommen
+    //addiert 1 drauf und speichert den zähler im test objekt zurück
     @Override
     public void run() {
         System.err.println(getName() + "wurde gestartet");
