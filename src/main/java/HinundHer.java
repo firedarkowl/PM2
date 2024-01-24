@@ -1,7 +1,6 @@
 public class HinundHer {
 
     public static void main(String[] args) {
-
         Thread hin = new Thread(() -> {
             //while für Bedingungen nutzen weil kann sein
             //dass das System selber random notify() aufruft
